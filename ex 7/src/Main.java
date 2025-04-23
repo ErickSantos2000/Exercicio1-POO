@@ -74,6 +74,6 @@ public class Main {
                      System.out.println("Opção invalida!");
              }
          } while (op != 0);
-        }
 sc.close();
+        }
     }
