@@ -62,7 +62,7 @@ public class Funcionario{
 
     public float calcularSalarioLiquido() {
         float salarioLiquido = salario * (11f / 100);
-        salarioLiquido =  salario - salarioLiquido;
-        return salarioLiquido;
+        salario =  salario - salarioLiquido;
+        return salario;
     }
 }
