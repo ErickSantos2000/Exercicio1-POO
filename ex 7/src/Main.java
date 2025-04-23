@@ -60,7 +60,7 @@ public class Main {
                  case 4:
                      if(tv.getLigado() == true){
                          controle.diminuirVolume();
-                        System.out.println("Aumentou diminuiu!");
+                        System.out.println("Volume diminuiu!");
                          System.out.println("Volume: " + tv.getVolume());
                      } else {
                          System.out.println("TV está desligada, não é possivel diminuir volume!");
