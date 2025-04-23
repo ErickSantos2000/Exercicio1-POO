@@ -2,7 +2,7 @@ public class Fita{
     private String titulo;
     private int precoAluguelDia;
 
-    Fita(String titulo, int precoAluguelDia){
+    public Fita(String titulo, int precoAluguelDia){
         this.titulo = titulo;
         this.precoAluguelDia =  precoAluguelDia;
     }

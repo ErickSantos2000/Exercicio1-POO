@@ -3,7 +3,6 @@ public class ControleRemoto{
     public ControleRemoto(Televisor tv){
         this.tv = tv;
     }
-
     public boolean ligar(){
         return tv.ligar();
     }

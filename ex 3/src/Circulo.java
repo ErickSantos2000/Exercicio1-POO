@@ -1,7 +1,7 @@
 public class Circulo{
     private float raio;
 
-    Circulo(float raio){
+    public Circulo(float raio){
         this.raio = raio;
     }
 

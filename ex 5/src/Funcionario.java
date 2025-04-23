@@ -1,3 +1,5 @@
+import com.sun.nio.sctp.SctpSocketOption;
+
 public class Funcionario{
     private int codigo;
     private String nome;
@@ -6,6 +8,16 @@ public class Funcionario{
     private String telefone;
     private int idade;
     private float salario;
+
+    public Funcionario(int codigo, String nome, String CPF, String endereco, String telefone, int idade, float salario) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.CPF = CPF;
+        this.endereco = endereco;
+        this.telefone = telefone;
+        this.idade = idade;
+        this.salario = salario;
+    }
 
     public int getCodigo(){
         return codigo;

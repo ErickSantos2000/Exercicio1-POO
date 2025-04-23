@@ -3,14 +3,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Funcionario f = new Funcionario();
-
-        f.setCodigo(123);
-        f.setNome("Erick");
-        f.setCPF("716.055.424.82");
-        f.setEndereco("Sao Manuel");
-        f.setTelefone("12345");
-        f.setIdade(24);
+        Funcionario f = new Funcionario(123, "Erick", "716.055.424.82", "Sao Manuel", "12345", 24,
+                3000.00f
+        );
 
         System.out.print("Digite o salário do funcionário: ");
         float s = sc.nextFloat();

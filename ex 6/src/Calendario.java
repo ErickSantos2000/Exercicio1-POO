@@ -3,7 +3,7 @@ public class Calendario{
     private int mes;
     private int ano;
 
-    Calendario(int dia, int mes, int ano){
+    public Calendario(int dia, int mes, int ano){
         this.dia = dia;
         this.mes = mes;
         this.ano = ano;
