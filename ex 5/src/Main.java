@@ -21,7 +21,6 @@ public class Main {
         System.out.println(f.estadoObj());
 
         float liquido = f.calcularSalarioLiquido();
-        f.setSalario(liquido);
 
         System.out.println("\nEstado após a modificação:");
         System.out.println(f.estadoObj());
