@@ -40,15 +40,12 @@ public class Televisor {
     }
 
     public void aumentarVolume() {
-        if (getLigado() == true){
             volume++;
-        }
+        
     }
 
     public void diminuirVolume() {
-        if (getLigado() == true){
             volume--;
-        }
     }
 
     public void trocarCanal(int novoCanal) {
