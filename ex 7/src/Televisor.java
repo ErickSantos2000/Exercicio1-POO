@@ -9,22 +9,23 @@ public class Televisor {
         this.volume = volume;
     }
 
+    // get e set
     public int getCanal() {
         return canal;
     }
-
-    public int getVolume() {
-        return volume;
-    }
-
     public void setCanal(int canal) {
         this.canal = canal;
     }
 
+    // get
+    public int getVolume() {
+        return volume;
+    }
+
+    // get e set
     public void setLigado(boolean ligado) {
         this.ligado = ligado;
     }
-
     public boolean getLigado(){
         return ligado;
     }
@@ -39,7 +40,6 @@ public class Televisor {
 
     public void aumentarVolume() {
             volume++;
-        
     }
 
     public void diminuirVolume() {
