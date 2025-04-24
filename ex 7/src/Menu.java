@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Menu {
-    Televisor tv;
-    ControleRemoto controle;
+    private Televisor tv;
+    private ControleRemoto controle;
 
     public Menu(Televisor tv, ControleRemoto controle){
         this.tv = tv;
