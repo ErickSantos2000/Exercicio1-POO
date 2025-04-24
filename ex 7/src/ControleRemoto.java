@@ -1,5 +1,6 @@
 public class ControleRemoto{
-    public Televisor tv;
+    private Televisor tv;
+    
     public ControleRemoto(Televisor tv){
         this.tv = tv;
     }
