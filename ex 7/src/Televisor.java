@@ -29,14 +29,12 @@ public class Televisor {
         return ligado;
     }
 
-    public boolean ligar() {
+    public void ligar() {
          setLigado(true);
-        return getLigado();
     }
 
-    public boolean desligar() {
+    public void desligar() {
         setLigado(false);
-        return getLigado();
     }
 
     public void aumentarVolume() {
