@@ -3,11 +3,11 @@ public class ControleRemoto{
     public ControleRemoto(Televisor tv){
         this.tv = tv;
     }
-    public boolean ligar(){
-        return tv.ligar();
+    public void ligar(){
+        tv.ligar();
     }
-    public boolean desligar(){
-        return tv.desligar();
+    public void desligar(){
+        tv.desligar();
     }
     public void aumentarVolume(){
         tv.aumentarVolume();
