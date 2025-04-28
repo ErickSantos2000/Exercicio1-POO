@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-public class ControleRemoto{
-    private Televisor tv;
-    
-    public ControleRemoto(Televisor tv){
-=======
+
 public class ControleRemoto {
     private Televisor tv;
 
     public ControleRemoto(Televisor tv) {
->>>>>>> 1947ba6 (ajuste no menu)
         this.tv = tv;
     }
 
@@ -35,4 +29,5 @@ public class ControleRemoto {
     public String toString() {
         return tv.toString();
     }
-}
+        }
+

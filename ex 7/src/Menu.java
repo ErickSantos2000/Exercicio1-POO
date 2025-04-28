@@ -41,16 +41,21 @@ public class Menu {
                 case 2:
                     if (tv.getLigado() == true) {
                         System.out.println("Informe para qual canal deseja trocar:");
-                        int trocarCanal = sc.nextInt();
-                        if (tv.getCanal() == trocarCanal) {
+                        int opCanal = sc.nextInt();
+
+                        if (tv.getCanal() == opCanal) {
                             System.out.println("Você já está no canal " + tv.getCanal());
-                        } else {
-                            controle.trocarCanal(trocarCanal);
+                        }
+                        else {
+                            controle.trocarCanal(opCanal);
                             System.out.println("Canal trocado para: " + tv.getCanal());
                         }
-                    } else {
+                    }
+
+                    else {
                         System.out.println("TV está desligada, não é possível trocar de canal!");
                     }
+
                     break;
 
                 case 3:
@@ -58,9 +63,13 @@ public class Menu {
                         controle.aumentarVolume();
                         System.out.println("Aumentou volume!");
                         System.out.println("Volume: " + tv.getVolume());
-                    } else if (tv.getLigado() == false) {
+                    }
+
+                    else if (tv.getLigado() == false) {
                         System.out.println("TV está desligada, não é possível aumentar volume!");
-                    } else {
+                    }
+
+                    else {
                         System.out.println("Atingiu volume máximo");
                         System.out.println("Volume: " + tv.getVolume());
                     }
