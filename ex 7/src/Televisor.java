@@ -33,11 +33,11 @@ public class Televisor {
     }
 
     public void ligar() {
-        setLigado(true);
+        this.ligado = true;
     }
 
     public void desligar() {
-        setLigado(false);
+        this.ligado = false;
     }
 
     public void aumentarVolume() {

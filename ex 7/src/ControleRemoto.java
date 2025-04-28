@@ -6,6 +6,29 @@ public class ControleRemoto {
         this.tv = tv;
     }
 
+    // get e set
+    public int getCanal() {
+        return tv.getCanal();
+    }
+
+    public void setCanal(int canal) {
+        tv.setCanal(canal);
+    }
+
+    // get
+    public int getVolume() {
+        return tv.getVolume();
+    }
+
+    // get e set
+    public void setLigado(boolean ligado) {
+        setLigado(ligado);
+    }
+
+    public boolean getLigado() {
+        return tv.getLigado();
+    }
+
     public void ligar() {
         tv.ligar();
     }

@@ -14,7 +14,7 @@ public class Menu {
         int op;
         do {
             System.out.println("---Controle---");
-            if (tv.getLigado() == false) {
+            if (controle.getLigado() == false) {
                 System.out.println("1 - Ligar TV");
             } else {
                 System.out.println("1 - Desligar TV");
@@ -29,7 +29,7 @@ public class Menu {
 
             switch (op) {
                 case 1:
-                    if (tv.getLigado() == false) {
+                    if (controle.getLigado() == false) {
                         controle.ligar();
                         System.out.println("TV ligada!");
                     } else {
@@ -39,16 +39,16 @@ public class Menu {
                     break;
 
                 case 2:
-                    if (tv.getLigado() == true) {
+                    if (controle.getLigado() == true) {
                         System.out.println("Informe para qual canal deseja trocar:");
                         int opCanal = sc.nextInt();
 
-                        if (tv.getCanal() == opCanal) {
-                            System.out.println("Você já está no canal " + tv.getCanal());
+                        if (controle.getCanal() == opCanal) {
+                            System.out.println("Você já está no canal " + controle.getCanal());
                         }
                         else {
                             controle.trocarCanal(opCanal);
-                            System.out.println("Canal trocado para: " + tv.getCanal());
+                            System.out.println("Canal trocado para: " + controle.getCanal());
                         }
                     }
 
@@ -59,32 +59,32 @@ public class Menu {
                     break;
 
                 case 3:
-                    if (tv.getLigado() == true && tv.getVolume() < 100) {
+                    if (controle.getLigado() == true && controle.getVolume() < 100) {
                         controle.aumentarVolume();
                         System.out.println("Aumentou volume!");
-                        System.out.println("Volume: " + tv.getVolume());
+                        System.out.println("Volume: " + controle.getVolume());
                     }
 
-                    else if (tv.getLigado() == false) {
+                    else if (controle.getLigado() == false) {
                         System.out.println("TV está desligada, não é possível aumentar volume!");
                     }
 
                     else {
                         System.out.println("Atingiu volume máximo");
-                        System.out.println("Volume: " + tv.getVolume());
+                        System.out.println("Volume: " + controle.getVolume());
                     }
                     break;
 
                 case 4:
-                    if (tv.getLigado() == true && tv.getVolume() > 0) {
+                    if (controle.getLigado() == true && controle.getVolume() > 0) {
                         controle.diminuirVolume();
                         System.out.println("Volume diminuiu!");
-                        System.out.println("Volume: " + tv.getVolume());
-                    } else if (tv.getLigado() == false) {
+                        System.out.println("Volume: " + controle.getVolume());
+                    } else if (controle.getLigado() == false) {
                         System.out.println("TV está desligada, não é possível diminuir volume!");
                     } else {
                         System.out.println("Atingiu volume mínimo");
-                        System.out.println("Volume: " + tv.getVolume());
+                        System.out.println("Volume: " + controle.getVolume());
                     }
                     break;
                 case 5:
@@ -147,12 +147,16 @@ public class Menu {
 
                 case 3:
                     if (tv.getLigado() == true && tv.getVolume() < 100) {
-                        tv.aumentarVolume();
+                        controle.aumentarVolume();
                         System.out.println("Aumentou volume!");
                         System.out.println("Volume: " + tv.getVolume());
-                    } else if (tv.getLigado() == false) {
+                    }
+
+                    else if (tv.getLigado() == false) {
                         System.out.println("TV está desligada, não é possível aumentar volume!");
-                    } else {
+                    }
+
+                    else {
                         System.out.println("Atingiu volume máximo");
                         System.out.println("Volume: " + tv.getVolume());
                     }
