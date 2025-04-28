@@ -1,26 +1,38 @@
+<<<<<<< HEAD
 public class ControleRemoto{
     private Televisor tv;
     
     public ControleRemoto(Televisor tv){
+=======
+public class ControleRemoto {
+    private Televisor tv;
+
+    public ControleRemoto(Televisor tv) {
+>>>>>>> 1947ba6 (ajuste no menu)
         this.tv = tv;
     }
-    public void ligar(){
+
+    public void ligar() {
         tv.ligar();
     }
-    public void desligar(){
+
+    public void desligar() {
         tv.desligar();
     }
-    public void aumentarVolume(){
+
+    public void aumentarVolume() {
         tv.aumentarVolume();
     }
 
-    public void diminuirVolume(){
+    public void diminuirVolume() {
         tv.diminuirVolume();
     }
-    public void trocarCanal(int novoCanal){
+
+    public void trocarCanal(int novoCanal) {
         tv.trocarCanal(novoCanal);
     }
-    public String toString(){
+
+    public String toString() {
         return tv.toString();
     }
 }
