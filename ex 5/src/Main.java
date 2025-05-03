@@ -19,6 +19,7 @@ public class Main {
 
         System.out.println("\nEstado após a modificação:");
         System.out.println(f.estadoObj());
+        System.out.println("Salario liquido: " + liquido);
 
         sc.close();
     }

@@ -69,12 +69,13 @@ public class Funcionario{
     }
 
     public String estadoObj(){
-        return String.format("Codigo: %d | Nome: %s | CPF: %s | Endereço: %s | Telefone: %s | Idade: %d | Salario: %f", codigo, nome, CPF, endereco, telefone, idade, salario);
+        return String.format("Codigo: %d\nNome: %s\nCPF: %s\nEndereço: %s\nTelefone: %s\nIdade: %d\nSalario: %.2f", codigo, nome, CPF, endereco, telefone, idade, salario);
     }
+
 
     public float calcularSalarioLiquido() {
         float salarioLiquido = salario * (11f / 100);
-        salario =  salario - salarioLiquido;
-        return salario;
+        salarioLiquido =  salario - salarioLiquido;
+        return salarioLiquido;
     }
 }
