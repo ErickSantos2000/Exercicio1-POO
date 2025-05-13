@@ -25,16 +25,21 @@ public class Mercado {
             }
         }
 
-    public Produto[] remover(String produtoRemovido){
+    public void remover(String produtoRemovido){
         Produto [] novoVetor = new Produto[20];
         int j = 0;
         for(int i = 0; i < vetor.length; i++){
-            if (!vetor[i].getNome().equals(produtoRemovido)){
-                novoVetor[j] = vetor[i];
+            if (vetor[i] != null && vetor[i].getNome().equals(produtoRemovido)){
+                novoVetor[j++] = vetor[i];
             }
         }
+
+        for(int i = 0; i < vetor.length; i++){
+                vetor[i++] = novoVetor[j];
+
+        }
+
         indice = j;
-        return novoVetor;
     }
 
 

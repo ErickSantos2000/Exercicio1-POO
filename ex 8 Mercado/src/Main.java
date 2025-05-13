@@ -34,9 +34,15 @@ public class Main {
 
         mercado.pesquisar(nomeProcurado);
 
-
         mercado.imprimir();
 
+        String removerNome;
+        System.out.println("Nome que deseja remover: ");
+        removerNome = entrada.nextLine();
+
+        mercado.remover(removerNome);
+
+        mercado.imprimir();
         entrada.close();
     }
 }

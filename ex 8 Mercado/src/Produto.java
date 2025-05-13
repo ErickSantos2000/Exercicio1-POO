@@ -8,9 +8,7 @@ public class Produto {
     }
 
     public String toString() {
-        int cont = 0;
-        cont++;
-        return String.format("Produto %d Nome: %s | Valor: %f", cont , nome, valor);
+        return String.format("Nome: %s | Valor: %f", nome, valor);
     }
 
     public boolean equals(Object obj) {
