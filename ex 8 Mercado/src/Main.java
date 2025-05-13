@@ -5,9 +5,9 @@ public class Main {
         Mercado mercado = new Mercado();
         Scanner entrada = new Scanner(System.in);
 
+        int op;
         float valor ;
         String nome ;
-        int op;
         String nomeRemovido;
         String nomeProcurado;
 
@@ -25,12 +25,12 @@ public class Main {
 
             switch (op){
                 case 1:
-                    System.out.println("Nome:");
+                    System.out.printf("Nome: ");
                     nome = entrada.nextLine();
 
                     entrada.nextLine(); // limpeza de buffer
 
-                    System.out.println("Valor:");
+                    System.out.printf("Valor: ");
                     valor = entrada.nextInt();
 
                     mercado.add(new Produto(nome, valor));
