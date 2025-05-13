@@ -8,7 +8,7 @@ public class Produto {
     }
 
     public String toString() {
-        return String.format("Nome: %s | Valor: %f", nome, valor);
+        return String.format("Nome: %s\nValor: %.2f\n", nome, valor);
     }
 
     public boolean equals(Object obj) {
@@ -28,7 +28,6 @@ public class Produto {
     public float getValor() {
         return valor;
     }
-
 
     public void setValor(float valor) {
         this.valor = valor;

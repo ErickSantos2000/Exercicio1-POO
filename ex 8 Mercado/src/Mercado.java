@@ -3,6 +3,14 @@ public class Mercado {
     private Produto produto;
     private int indice;
 
+    public int getIndice() {
+        return indice;
+    }
+
+    public Produto[] getVetor() {
+        return vetor;
+    }
+
     public Mercado(){
         vetor = new Produto[20];
     }
@@ -16,33 +24,42 @@ public class Mercado {
         }
     }
 
-    public void pesquisar(String nomeProcurado){
+    public boolean pesquisar(String nomeProcurado){
 
         for(int i = 0; i < vetor.length; i++){
             if(vetor[i] != null && vetor[i].getNome().equals(nomeProcurado)){
-                    System.out.println("Achamos " + vetor[i]);
+                    return true;
                 }
             }
+        return false;
         }
 
-    public void remover(String produtoRemovido){
+    public boolean remover(String produtoRemovido){
         Produto [] novoVetor = new Produto[20];
         int j = 0;
-        for(int i = 0; i < vetor.length; i++){
-            if (vetor[i] != null && vetor[i].getNome().equals(produtoRemovido)){
-                novoVetor[j++] = vetor[i];
+
+        if(indice == 0){
+            return false;
+        }
+        else{
+            for(int i = 0; i < vetor.length; i++){
+                if (vetor[i] != null && !vetor[i].getNome().equals(produtoRemovido)){
+                    novoVetor[j++] = vetor[i];
+                }
             }
+
+            for(int i = 0; i < j; i++){
+                vetor[i] = novoVetor[i];
+            }
+
+            for(int i = j; i < vetor.length; i++){
+                vetor[i] = null;
+            }
+
+            indice = j;
+            return true;
         }
-
-        for(int i = 0; i < vetor.length; i++){
-                vetor[i++] = novoVetor[j];
-
-        }
-
-        indice = j;
     }
-
-
 
     public void imprimir(){
         int cont = 0;

@@ -5,44 +5,76 @@ public class Main {
         Mercado mercado = new Mercado();
         Scanner entrada = new Scanner(System.in);
 
-        float valor;
-        String nome;
-        int vezes = 0;
+        float valor ;
+        String nome ;
+        int op;
+        String nomeRemovido;
+        String nomeProcurado;
 
-        System.out.println("Quantos produtos deseja adicionar: ");
-        vezes = entrada.nextInt();
-        entrada.nextLine();
+        do {
+            System.out.println("---MENU---");
+            System.out.println("1 - adicionar produto");
+            System.out.println("2 - remover produto");
+            System.out.println("3 - pesquisar produto");
+            System.out.println("4 - imprimir produto");
+            System.out.println("0 - sair");
+            System.out.println("digite a opção:");
+            op = entrada.nextInt();
 
-        for (int i = 0; i < vezes; i++) {
-            System.out.println("Nome:");
-            nome = entrada.nextLine();
+            entrada.nextLine(); // limpeza de buffer
 
-            entrada.nextLine();
+            switch (op){
+                case 1:
+                    System.out.println("Nome:");
+                    nome = entrada.nextLine();
 
-            System.out.println("Valor:");
-            valor = entrada.nextFloat();
+                    entrada.nextLine(); // limpeza de buffer
 
-            entrada.nextLine();
+                    System.out.println("Valor:");
+                    valor = entrada.nextInt();
 
-            mercado.add(new Produto(nome, valor));
+                    mercado.add(new Produto(nome, valor));
+                    break;
 
-        }
-        System.out.println("Nome que deseja procurar:");
-        String nomeProcurado = entrada.nextLine();
+                case 2:
+                    System.out.println("Produto que deseja remover:");
+                    nomeRemovido = entrada.nextLine();
 
-        entrada.nextLine();
+                    if(mercado.remover(nomeRemovido)){
+                        mercado.remover(nomeRemovido);
+                        System.out.println(nomeRemovido + " foi removido!");
+                    }
+                    else {
+                        System.out.println("Lista de produtos esta vazio!");
+                    }
+                    break;
 
-        mercado.pesquisar(nomeProcurado);
+                case 3:
+                    System.out.println("Produto que deseja perquisar:");
+                    nomeProcurado = entrada.nextLine();
 
-        mercado.imprimir();
+                    if(mercado.pesquisar(nomeProcurado)){
+                        System.out.println(nomeProcurado + " foi achador!");
+                    }
+                    else {
+                        System.out.println(nomeProcurado + " não foi achado!");
+                    }
+                    break;
 
-        String removerNome;
-        System.out.println("Nome que deseja remover: ");
-        removerNome = entrada.nextLine();
+                case 4:
+                    mercado.imprimir();
+                    break;
 
-        mercado.remover(removerNome);
+                case 0:
+                    System.out.println("Saindo...");
+                    break;
 
-        mercado.imprimir();
+                default:
+                    System.out.println("Opção invalida!");
+            }
+
+
+        } while (op != 0);
         entrada.close();
     }
 }
