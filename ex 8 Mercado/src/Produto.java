@@ -16,13 +16,13 @@ public class Produto {
             return true;
         }
 
-        if (obj == null || getClass() != obj.getClass()) {
+        if (getClass() != obj.getClass()) {
             return false;
         }
 
-        Produto outraPessoa = (Produto) obj;
+        Produto outroProduto = (Produto) obj;
 
-        return nome.equalsIgnoreCase(outraPessoa.nome);
+        return nome.equalsIgnoreCase(outroProduto.nome);
     }
 
     public float getValor() {

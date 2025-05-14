@@ -54,7 +54,7 @@ public class Main {
                     nomeProcurado = entrada.nextLine();
 
                     if(mercado.pesquisar(nomeProcurado)){
-                        System.out.println(nomeProcurado + " foi achador!");
+                        System.out.println(nomeProcurado + " foi achado!");
                     }
                     else {
                         System.out.println(nomeProcurado + " não foi achado!");
