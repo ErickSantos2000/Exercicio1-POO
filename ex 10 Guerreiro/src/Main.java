@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.Random;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -19,14 +19,14 @@ public class Main {
                 case 1:
                     Guerreiro g1 = new Guerreiro("Erick", 2000);
                     Guerreiro g2 = new Guerreiro("Felipe", 3000);
-                    LutaRecursiva lutaRecursiva = new LutaRecursiva(g1, g2);
-                    lutaRecursiva.luta();
+                    g1.LutaRecursiva(g2);
+                    g2.LutaRecursiva(g1);
                     break;
                 case 2:
                     Guerreiro g1r = new Guerreiro("Erick", 2000);
                     Guerreiro g2r = new Guerreiro("Felipe", 3000);
-                    LutaInterativa lutaInterativa = new LutaInterativa(g1r, g2r);
-                    lutaInterativa.luta();
+                    g1r.lutaInterativa(g2r);
+                    g2r.lutaInterativa(g1r);
                     break;
                 case 0:
                     System.out.println("Saindo...");
