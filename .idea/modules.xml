@@ -4,13 +4,15 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/POO - Exercicio - 1.iml" filepath="$PROJECT_DIR$/.idea/POO - Exercicio - 1.iml" />
       <module fileurl="file://$PROJECT_DIR$/ex 1/ex 1.iml" filepath="$PROJECT_DIR$/ex 1/ex 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ex 10 Guerreiro/ex 10 Guerreiro.iml" filepath="$PROJECT_DIR$/ex 10 Guerreiro/ex 10 Guerreiro.iml" />
       <module fileurl="file://$PROJECT_DIR$/ex 2/ex 2.iml" filepath="$PROJECT_DIR$/ex 2/ex 2.iml" />
       <module fileurl="file://$PROJECT_DIR$/ex 3/ex 3.iml" filepath="$PROJECT_DIR$/ex 3/ex 3.iml" />
       <module fileurl="file://$PROJECT_DIR$/ex 4/ex 4.iml" filepath="$PROJECT_DIR$/ex 4/ex 4.iml" />
       <module fileurl="file://$PROJECT_DIR$/ex 5/ex 5.iml" filepath="$PROJECT_DIR$/ex 5/ex 5.iml" />
       <module fileurl="file://$PROJECT_DIR$/ex 6/ex 6.iml" filepath="$PROJECT_DIR$/ex 6/ex 6.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ex 7/ex 7.iml" filepath="$PROJECT_DIR$/ex 7/ex 7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ex 7 ControleRemoto/ex 7 ControleRemoto.iml" filepath="$PROJECT_DIR$/ex 7 ControleRemoto/ex 7 ControleRemoto.iml" />
       <module fileurl="file://$PROJECT_DIR$/ex 8 Mercado/ex 8 Mercado.iml" filepath="$PROJECT_DIR$/ex 8 Mercado/ex 8 Mercado.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ex 9 Helicoptero/ex 9 Helicoptero.iml" filepath="$PROJECT_DIR$/ex 9 Helicoptero/ex 9 Helicoptero.iml" />
     </modules>
   </component>
 </project>
