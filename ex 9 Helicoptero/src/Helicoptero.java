@@ -1,5 +1,5 @@
 
-public class Helicóptero{
+public class Helicoptero{
     private boolean ligado;
     private int altitude;
     private int capacidade;
