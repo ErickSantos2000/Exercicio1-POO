@@ -1,15 +1,41 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    public static void main(String [] args){
+        Helicóptero h1 = new Helicóptero(4);
+        Helicóptero h2 = new Helicóptero(4);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        System.out.println("H1");
+        h1.toString();
+        System.out.println("H2");
+        h2.toString();
+
+        h1.entra();
+        h2.entra();
+
+        h1.ligar();
+        h2.ligar();
+
+        h1.decolar(10);
+        h2.decolar(10);
+
+        System.out.println("H1");
+        h1.toString();
+        System.out.println("H2");
+        h2.toString();
+
+        h1.aterrissar();
+        h2.aterrissar();
+
+        h1.desligar();
+        h2.desligar();
+
+        h1.sai();
+        h2.sai();
+
+        System.out.println("H1");
+        h1.toString();
+        System.out.println("H2");
+        h2.toString();
+
+
     }
 }
