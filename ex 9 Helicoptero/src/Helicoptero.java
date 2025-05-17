@@ -1,73 +1,93 @@
-
-public class Helicoptero{
+public class Helicoptero {
     private boolean ligado;
     private int altitude;
     private int capacidade;
     private int quantasPessoas;
 
-    public Helicóptero(int capacidade){
+
+    public Helicoptero(int capacidade) {
+        this.capacidade = capacidade;
         ligado = false;
         quantasPessoas = 0;
         altitude = 0;
-        this.capacidade = capacidade;
     }
 
-    public void entra() {
-        if (quantasPessoas < capacidade) {
+    public boolean getLigado(){
+        return ligado;
+    }
+
+    public int getAltitude() {
+        return altitude;
+    }
+
+    public boolean entra() {
+        if (altitude > 0) {
+            return false;
+        }
+        else if (quantasPessoas == capacidade) {
+            return false;
+        }
+        else {
             quantasPessoas++;
-        } else {
-            System.out.println("Não ha espaço para mais pessoas!");
+            return true;
         }
     }
 
-    public void sai() {
-        if ( 0 < capacidade) {
+    public boolean sai() {
+        if (altitude > 0){
+            return false;
+        }
+        else if (0 == quantasPessoas) {
+            return false;
+        } else {
             quantasPessoas--;
-        } else {
-            System.out.println("Não ha ninguem para sair!");
+            return true;
         }
     }
 
-    public void ligar(){
-        if(ligado == true){
-            System.out.println("Helicoptero ja esta ligado!");
-        }
-        else {
+    public boolean ligar() {
+        if (ligado) {
+            return false;
+        } else {
             ligado = true;
+            return true;
         }
     }
 
-    public void desligar(){
-        if(altitude == 0){
-            System.out.println("Não pode desligar, pq tu ta alto, pow!");
-        }
-        else if(ligado == false){
-            System.out.println("Helicoptero ja esta ligado!");
-        }
-        else {
+    public boolean desligar() {
+        if (altitude > 0) {
+            return false;
+        } else if (!ligado) {
+            return false;
+        } else {
             ligado = false;
+            return true;
         }
-        
     }
 
-    public void decolar(int altitude) {
-        if (ligado && this.altitude == 0) {
-            this.altitude = altitude;
+    public boolean decolar() {
+        if (ligado && altitude == 0) {
+            altitude += 10;
+            return true;
         } else {
-            System.out.println("Não é possível decolar. Verifique se o helicóptero está ligado e na terra.");
+            return false;
         }
     }
 
-    public void aterrissar() {
-        if (ligado && altitude > 0) {
+    public boolean aterrissar() {
+        if (altitude > 0) {
             altitude = 0;
+            return true;
         } else {
-            System.out.println("Não é possível aterrissar. Verifique se o helicóptero está ligado e voando.");
+            return false;
         }
     }
 
-    public String toString(){
-        return String.format("Ligado: %b\nAltitude: %d\nCapacidade: %d\n Quantidade de pessoa: %d", ligado, altitude,capacidade,quantasPessoas);
-        
+
+    public String toString() {
+        return String.format("\nLigado: %b\nAltitude: %d\nCapacidade: %d\nQuantidade de pessoas: %d\n",
+                ligado, altitude, capacidade, quantasPessoas);
     }
+
+
 }
